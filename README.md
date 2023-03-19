@@ -10,7 +10,16 @@ This code challenge tests my undertanding of the javascript functions and condit
 2. Write a program that takes as input the speed of a car e.g 80. If the speed is less than 70, it should print “Ok”. Otherwise, for every 5 km/s above the speed limit (70), it should give the driver one demerit point and print the total number of demerit points. For example, if the speed is 80, it should print: “Points: 2”. If the driver gets more than 12 points, the function should print: “License suspended”.
 
 3. Write a program whose major task is to calculate an individual’s Net Salary by getting the inputs of basic salary and benefits. Calculate the payee (i.e. Tax), NHIFDeductions, NSSFDeductions, gross salary, and net salary.  NB: Use KRA, NHIF, and NSSF values provided in the link below.
-    * https://www.aren.co.ke/payroll/taxrates.htmLinks to an external site.  
+    * https://www.aren.co.ke/payroll/taxrates.htmLinks   
 
     * https://www.kra.go.ke/en/individual/calculate-tax/calculating-tax/paye
+
+## Setup/Installation Requirements
+To execute my programs:
+
+1. Clone the repository into a desired folder.
+2. Open the now local repository to access the code
+3. Run challenge1.js file contents on the browser's console to get the output of the program
+4. Run challenge2.js and challenge3.js on the terminal using the node filename.js command to get the output of the functions
+
 
