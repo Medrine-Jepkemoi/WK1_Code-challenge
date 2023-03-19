@@ -239,26 +239,29 @@ function netSalary(basicSalary, benefits){
 
     // calling the employeeBenefits functions and assigning the desired parameters to it to calculate the total benefits an employee enjoys
     let returnedBenefits = employeeBenefits('no');
-
+    console.log(`Total Benefits: ${returnedBenefits}`)
 
     //calling the calculateGross function and assigning the desired parameters to it to calculate the gross salary of an employee
     let returnedGross = calculateGross(basicSalary, returnedBenefits);
+    console.log(`Gross Salary: ${returnedGross}`)
 
     //calling the calculatePayee function and assigning the desired parameters to it to calculate what amount of payee the employee is charged for deduction
     let returnedPayee = calculatePayee(returnedGross);
+    console.log(`Payee: ${returnedPayee}`)
 
     //calling the calculateNhif function and assigning the desired parameters to it to calculate what amount of nhif the employee contributes
     let returnedNhif = calculateNhif(returnedGross);
+    console.log(`Nhif Deduction: ${returnedNhif}`)
 
     //calling the calculateNssf function and assigning the desired parameters to it to calculate what amount of nssf the employee contributes
     let returnedNssf = calculateNssf(returnedGross, 'old', 'no');
-    console.log(returnedNssf)
+    console.log(`Nssf Deduction: ${returnedNssf}`)
 
     //calling the deductions function and assigning the desired parameters to it to calculate the total amount that will be deducted from an employees gross
     let returnedDeductions = deductions(returnedPayee, returnedNhif, returnedNssf);
-    console.log(returnedDeductions)
+    console.log(`Total Deductions: ${returnedDeductions}`)
 
-    //declaring a variable to store the value of the net pay an employee by doing the necessary arithmetic operations
+    //declaring a variable to store the value of the net pay an employee by doing the necessary arithmetic operations 
     let netPay = returnedGross - returnedDeductions;
     return netPay;
 
@@ -267,4 +270,4 @@ function netSalary(basicSalary, benefits){
 
 //calling the calculateNssf function and assigning the desired parameters to it to calculate the net salary an employee will recieve as payment after all deductions have been made
 let returnedNetSalary = netSalary(30000, benefits);
-console.log(returnedNetSalary)
+console.log(`Net Salary: ${returnedNetSalary}`)
