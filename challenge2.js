@@ -1,30 +1,33 @@
-//declare a function speedDetoctor and assign a parameter carspee to it
+/**
+* Determines whether the speed of a vehicle is within the limits, beyond it and by howmany speedpoints or if the speed points have been exceeded, causing a penalty using the car's speed as a parameter
+* @param {Number} carSpeed
+* @return {String} comment
+*/
 function speedDetector(carSpeed){
 
-    let speedLimit = 70; //Declare the speedLimit variable and assign the speedlimit value to it
+    //Declare the speedLimit variable and assign the speedlimit value to it
+    let speedLimit = 70; 
     
-    let exceededSpeedPoints = (carSpeed - speedLimit) / 5; //Declare a variable exceededSpeedPoints that calculates the demerit points that one gets after exceeding a certain speed
+    //Declare a variable exceededSpeedPoints that calculates the demerit points by deducting the speed limit from the car's speed and diviting it by the value of one demerit point
+    let exceededSpeedPoints = (carSpeed - speedLimit) / 5; 
 
 
-    //Conditions set, where one of them must be met to return a desired output
-
-    //first condition
+    //Conditions set, to determine if the car's speed was within the speed limit, above it and by how many demerit points and if the driver has exceeded the maximum number of demerit points to have their licence suspended
     if (carSpeed < speedLimit){
-        return `Ok`; //expected output when the first condition is met
+        return `Ok`; 
     }
 
-    //second condition
     else if (carSpeed > speedLimit && exceededSpeedPoints < 12){
 
-        return `Points: ${exceededSpeedPoints}`; //expected output when the second condition is met
+        return `Points: ${exceededSpeedPoints}`; 
     }
 
     else{
-        return `License suspended`;//expecthed output when none of the above conditions are met
+        return `License suspended`;
     }
 }
 
 
-//calling the function and passing an argument to it
-let returnedValue = speedDetector(300); //declaring a variable to store the output after the function has been called
-console.log(returnedValue); //displaying the outputted value on the console
+//calling the function and passing an argument to find out the outcome of the driver based on their speed
+let returnedValue = speedDetector(90); 
+console.log(returnedValue); 
