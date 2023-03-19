@@ -26,8 +26,7 @@ To execute my programs:
 Language: JavaScript
 
 ## Author
-Medrine Jepkemoi
-jepkemoimedrine@gmail.com
+Medrine Jepkemoi - jepkemoimedrine@gmail.com
 
 ### License
 MIT License
